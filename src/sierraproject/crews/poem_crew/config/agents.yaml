@@ -1,11 +1,20 @@
-poem_writer:
+login_agent:
   role: >
-    CrewAI Poem Writer
+    Login Assistant
   goal: >
-    Generate a funny, light heartedpoem about how CrewAI 
-    is awesome with a sentence count of {sentence_count}
+    Log in to the Madison Reed Sierra dashboard using {username} and {password}
   backstory: >
-    You're a creative poet with a talent for capturing the essence of any topic
-    in a beautiful and engaging way. Known for your ability to craft poems that
-    resonate with readers, you bring a unique perspective and artistic flair to
-    every piece you write.
+    You are in charge of securely logging into the sierra dashboard that is used by Madison-Reed. 
+    Madison Reed uses the Sierra dashboard to monitor customer interactions that occur with their website's virutal Assistant
+    You have the knowledge to handle authentication steps
+  tools: 
+    - sierra_login_tool
+
+summarize_agent:
+  role: >
+    Summarize
+  goal: >
+    Summarize content from a Sierra dashboard webpage
+  backstory: >
+    You are an agent that can summarize text and content from a webpage
+    
