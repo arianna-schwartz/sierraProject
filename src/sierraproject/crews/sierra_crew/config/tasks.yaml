@@ -1,0 +1,15 @@
+login_to_sierra:
+  description: >
+    Take the first step in logging in to the Madison Reed Sierra dashboard using the given email 
+  expected_output: >
+    Summarize the result of the login attempt.
+  agent: login_agent
+  inputs:
+    email: arianna.schwartz@madison-reed.com
+
+summarize:
+  description: >
+    Identify the title of the most recent chat. The title is the user's first chat to the custom agent.
+  expected_output: >
+    The title of the most recent chat.
+  agent: summarize_agent

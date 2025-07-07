@@ -3,14 +3,18 @@ from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
 from typing import List
 
+from crewai.project import tool
+from sierraproject.tools.CustomLoginTool import CustomLoginTool  # Updated import path
+
+
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
 
 
 @CrewBase
-class PoemCrew:
-    """Poem Crew"""
+class SierraCrew:
+    """Sierra Login Crew"""
 
     agents: List[BaseAgent]
     tasks: List[Task]
@@ -21,26 +25,41 @@ class PoemCrew:
     agents_config = "config/agents.yaml"
     tasks_config = "config/tasks.yaml"
 
+    # @tool
+    # def sierra_login_tool(self):
+    #     return CustomLoginTool()
+    
     # If you would lik to add tools to your crew, you can learn more about it here:
     # https://docs.crewai.com/concepts/agents#agent-tools
     @agent
-    def poem_writer(self) -> Agent:
+    def login_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config["poem_writer"],  # type: ignore[index]
+            config=self.agents_config["login_agent"],  # type: ignore[index]
+            tools = [CustomLoginTool()]
         )
+    
+    @agent
+    def summarize_agent(self) -> Agent:
+        return Agent(config=self.agents_config["summarize_agent"])
 
     # To learn more about structured task outputs,
     # task dependencies, and task callbacks, check out the documentation:
     # https://docs.crewai.com/concepts/tasks#overview-of-a-task
     @task
-    def write_poem(self) -> Task:
+    def login_to_sierra(self) -> Task:
         return Task(
-            config=self.tasks_config["write_poem"],  # type: ignore[index]
+            config=self.tasks_config["login_to_sierra"],  # type: ignore[index]
+        )
+
+    @task 
+    def summarize(self) -> Task:
+        return Task(
+            config=self.tasks_config["summarize"],  # type: ignore[index]
         )
 
     @crew
     def crew(self) -> Crew:
-        """Creates the Research Crew"""
+        """Creates the Login Crew"""
         # To learn how to add knowledge sources to your crew, check out the documentation:
         # https://docs.crewai.com/concepts/knowledge#what-is-knowledge
 
