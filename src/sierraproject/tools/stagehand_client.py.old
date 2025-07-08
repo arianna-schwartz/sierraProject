@@ -1,0 +1,14 @@
+import os
+
+from crewai_tools import StagehandTool
+from dotenv import load_dotenv
+from stagehand.schemas import AvailableModel
+
+load_dotenv()
+
+stagehand_tool = StagehandTool(
+    api_key=os.getenv("BROWSERBASE_API_KEY"),
+    project_id=os.getenv("BROWSERBASE_PROJECT_ID"),
+    model_name=AvailableModel.GPT_4O,
+    model_api_key=os.getenv("OPENAI_API_KEY"),
+)
