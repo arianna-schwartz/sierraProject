@@ -1,57 +1,61 @@
-from crewai import Agent, Crew, Process, Task
-from crewai.project import CrewBase, agent, crew, task
-from crewai.agents.agent_builder.base_agent import BaseAgent
+import os
 from typing import List
 
-from crewai.project import tool
-from sierraproject.tools.CustomLoginTool import CustomLoginTool  # Updated import path
+from crewai import Agent, Crew, Process, Task
+from crewai.agents.agent_builder.base_agent import BaseAgent
+from crewai.project import CrewBase, agent, crew, task
+from dotenv import load_dotenv
 
+from sierraproject.tools.mcp_config import get_stagehand_mcp_tools
 
-# If you want to run a snippet of code before or after the crew starts,
-# you can use the @before_kickoff and @after_kickoff decorators
-# https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
+# Load environment variables
+load_dotenv()
 
 
 @CrewBase
 class SierraCrew:
     """Sierra Login Crew"""
 
-    agents: List[BaseAgent]
-    tasks: List[Task]
-
-    # Learn more about YAML configuration files here:
-    # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
-    # Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
     agents_config = "config/agents.yaml"
     tasks_config = "config/tasks.yaml"
+    agents: List[BaseAgent]
+    tasks: List[Task]
+    mcp_adapter = None
+    tools = []
 
-    # @tool
-    # def sierra_login_tool(self):
-    #     return CustomLoginTool()
-    
-    # If you would lik to add tools to your crew, you can learn more about it here:
-    # https://docs.crewai.com/concepts/agents#agent-tools
+    def __init__(self):
+        """Initialize the crew with MCP tools."""
+        # Load environment variables
+        load_dotenv()
+        
+        # Initialize MCP adapter
+        self.mcp_adapter = get_stagehand_mcp_tools()
+        self.tools = self.mcp_adapter.tools
+        
+        print(f">>> Available tools from Stagehand MCP server: {[tool.name for tool in self.tools]}")
+
     @agent
     def login_agent(self) -> Agent:
         return Agent(
             config=self.agents_config["login_agent"],  # type: ignore[index]
-            tools = [CustomLoginTool()]
+            tools=self.tools,
+            verbose=True,
         )
-    
+
     @agent
     def summarize_agent(self) -> Agent:
-        return Agent(config=self.agents_config["summarize_agent"])
+        return Agent(
+            config=self.agents_config["summarize_agent"],  # type: ignore[index]
+            verbose=True,
+        )
 
-    # To learn more about structured task outputs,
-    # task dependencies, and task callbacks, check out the documentation:
-    # https://docs.crewai.com/concepts/tasks#overview-of-a-task
     @task
     def login_to_sierra(self) -> Task:
         return Task(
             config=self.tasks_config["login_to_sierra"],  # type: ignore[index]
         )
 
-    @task 
+    @task
     def summarize(self) -> Task:
         return Task(
             config=self.tasks_config["summarize"],  # type: ignore[index]
@@ -60,12 +64,9 @@ class SierraCrew:
     @crew
     def crew(self) -> Crew:
         """Creates the Login Crew"""
-        # To learn how to add knowledge sources to your crew, check out the documentation:
-        # https://docs.crewai.com/concepts/knowledge#what-is-knowledge
-
         return Crew(
-            agents=self.agents,  # Automatically created by the @agent decorator
-            tasks=self.tasks,  # Automatically created by the @task decorator
+            agents=self.agents,
+            tasks=self.tasks,
             process=Process.sequential,
             verbose=True,
         )
