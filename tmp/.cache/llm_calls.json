@@ -1,0 +1,68 @@
+{
+  "8f81321b1d6095569ae0ca00fa2e0a8e69f93437e2dfbcc43a080d75340ed4a3": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 5,
+          "description": "The email input field where the user wants to type the email address.",
+          "method": "fill",
+          "arguments": [
+            "arianna.schwartz@madison-reed.com"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1751970008257,
+    "requestId": "y8m27hg1hf"
+  },
+  "26367c7c7e8d1c89e256b3bb2c497a8278538e2f4a4c5a55c93bbdf9fa07735e": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 18,
+          "description": "The 'Sign in' button, which is the most relevant element for the action 'Click the sign in button'.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1751970430669,
+    "requestId": "x8gastcqmi"
+  },
+  "b6dcbe5e24f3c998d9286cc7640d18ebedac9aa431c26b0c659752657199aa7c": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 5,
+          "description": "The email input field where the user can type their email address.",
+          "method": "fill",
+          "arguments": [
+            "arianna.schwartz@madison-reed.com"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1751970408579,
+    "requestId": "8dl9a98fxoe"
+  },
+  "589fa49448582fd6bc2f06a740b2572490bf1d6bc1d8bcf0d9477e317240c3ab": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 36,
+          "description": "Heading indicating the user should check their email for a code, suggesting the login attempt requires email verification."
+        },
+        {
+          "elementId": 39,
+          "description": "Static text explaining that a 6-character code has been sent to the user's email, indicating the next step in the login process."
+        },
+        {
+          "elementId": 40,
+          "description": "Static text displaying the user's email address where the code has been sent, confirming the email used for login."
+        }
+      ]
+    },
+    "timestamp": 1751970442012,
+    "requestId": "eznaz1larr"
+  }
+}

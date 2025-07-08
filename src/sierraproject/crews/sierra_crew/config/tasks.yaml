@@ -1,11 +1,12 @@
 login_to_sierra:
   description: >
-    Take the first step in logging in to the Madison Reed Sierra dashboard using the given email 
+    Log in into the Madison Reed Dashboard by performing these steps one by one:
+    Step 1: Navigate to the url: https://madison-reed.sierra.ai
+    Step 2: Enter the email: {email} in the email field
+    Step 3: Click the sign in button
   expected_output: >
-    Summarize the result of the login attempt.
+    Log in into the Madison Reed Dashboard and summarize the result of the login attempt.
   agent: login_agent
-  inputs:
-    email: arianna.schwartz@madison-reed.com
 
 summarize:
   description: >
