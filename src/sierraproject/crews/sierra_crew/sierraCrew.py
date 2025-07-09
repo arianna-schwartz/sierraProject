@@ -7,9 +7,13 @@ from crewai.project import CrewBase, agent, crew, task
 from dotenv import load_dotenv
 
 from sierraproject.tools.mcp_config import get_stagehand_mcp_tools
+from sierraproject.tools.verification_code_input_tool import VerificationCodeInputTool
 
 # Load environment variables
 load_dotenv()
+
+# one tool for taking screen shots of conversations
+# one tool for analyzing screenshots to read the conversations - vision_tool()
 
 
 @CrewBase
@@ -32,6 +36,10 @@ class SierraCrew:
         self.mcp_adapter = get_stagehand_mcp_tools()
         self.tools = self.mcp_adapter.tools
         
+        # Add verification code input tool to tools list
+        verification_tool = VerificationCodeInputTool()
+        self.tools.append(verification_tool)
+        
         print(f">>> Available tools from Stagehand MCP server: {[tool.name for tool in self.tools]}")
 
     @agent
@@ -46,6 +54,7 @@ class SierraCrew:
     def summarize_agent(self) -> Agent:
         return Agent(
             config=self.agents_config["summarize_agent"],  # type: ignore[index]
+            tools=self.tools,
             verbose=True,
         )
 
@@ -53,6 +62,7 @@ class SierraCrew:
     def login_to_sierra(self) -> Task:
         return Task(
             config=self.tasks_config["login_to_sierra"],  # type: ignore[index]
+            # human_input= True,
         )
 
     @task

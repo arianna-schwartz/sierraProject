@@ -4,13 +4,28 @@ login_to_sierra:
     Step 1: Navigate to the url: https://madison-reed.sierra.ai
     Step 2: Enter the email: {email} in the email field
     Step 3: Click the sign in button
+    Step 4: Use the get_verification_code tool to get the verification code from the user via the CLI. The code was sent to their email.
+    Step 5: Enter the verification code obtained in Step 4 in the "code" field on the web page
+    Step 6: Click the "verify code" button
   expected_output: >
     Log in into the Madison Reed Dashboard and summarize the result of the login attempt.
   agent: login_agent
 
+
 summarize:
   description: >
-    Identify the title of the most recent chat. The title is the user's first chat to the custom agent.
+    1. Wait for the log in to be complete and for the webpage to fully load.
+    2. extract content from the web page
+    3. Each conversation between a customer and the virtual chat bot is listed beneath the title "Conversations." The title of each conversation is in bold text. Do the following steps:
+    
+    3a: Click on the title of the most recent conversation to open it.
+    3b: Read the conversation and remember its content. Scroll if necessary to read the entire conversation.
+    3c: Click on the next most recent conversation to open it 
+    3d: repeat steps 3b and 3c until you have read the last 5 conversations in full.
+    
+    4: Identify the problems that the customer had in each conversation.
+    5: Identify the solutions that the virtual chat bot provided in each conversation.
+    6: Summarize the problems and solutions in a concise manner.
   expected_output: >
-    The title of the most recent chat.
+    A summary of the problems and solutions from the last 5 conversations between customers and the virtual chat bot.
   agent: summarize_agent

@@ -64,5 +64,793 @@
     },
     "timestamp": 1751970442012,
     "requestId": "eznaz1larr"
+  },
+  "65d3fecf9d369ee8f565106def386da95ca926666ea68219772bc0ded3bda13d": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-5",
+          "description": "Email input field for user login",
+          "method": "fill",
+          "arguments": [
+            "arianna.schwartz@madison-reed.com"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752087721593,
+    "requestId": "a322stzta5i"
+  },
+  "baee6027a10f944c604d3c4e46018b82aa3b3683cbf398c397f69586d7009c22": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-33",
+          "description": "button: Sign in"
+        }
+      ]
+    },
+    "timestamp": 1751997845550,
+    "requestId": "4935bhphj35"
+  },
+  "a9b1177f16791c995f8f2755ac990e9c8ddc7b426e324a4a30064bcc731112d3": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-33",
+          "description": "The 'Sign in' button, which is the most relevant element for the action 'Click the sign in button'.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752087727498,
+    "requestId": "ins3ml49g7f"
+  },
+  "231294a86e9f106d28b8ea8b3ca79ef47c60ef74cca9c315e677e6e39fb61876": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-5",
+          "description": "The email input field where the user wants to type the email address.",
+          "method": "fill",
+          "arguments": [
+            "arianna.schwartz@madison-reed.com"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752016554314,
+    "requestId": "87rn5x8517c"
+  },
+  "834d88f19d65a67fad5f51e5aca3168a91c947138bb3d5801519c8bebf418cac": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "This is the textbox where users can input the verification code they received via email."
+        }
+      ]
+    },
+    "timestamp": 1751999646164,
+    "requestId": "uj7d3rziq5"
+  },
+  "033f0414768386a66c873d44eca6e61e729d7e13a7cfdb976692f20cccb0a5e2": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "Textbox for user to input the verification code received via email.",
+          "method": "fill",
+          "arguments": [
+            ""
+          ]
+        }
+      ]
+    },
+    "timestamp": 1751999650717,
+    "requestId": "73y49nvraqp"
+  },
+  "2cdcac1aecc726c7a129ce846fb920555f2111b81d645f75ce5c07c0c779e025": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The input field where the user is expected to type the verification code.",
+          "method": "fill",
+          "arguments": [
+            ""
+          ]
+        }
+      ]
+    },
+    "timestamp": 1751999658341,
+    "requestId": "ev4m2oa53id"
+  },
+  "9c9bceed94b7d017a55117aff82bbd844d52232af80615f16b6638a4853528e4": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' used to confirm the entered code.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752000136614,
+    "requestId": "9z2glpjox2"
+  },
+  "4b55ea9fbaac79db00c3d7a5083dcaf591ec9d6feabaaace65eb0ce3721cfb68": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "A textbox field intended for the user to enter the verification code."
+        }
+      ]
+    },
+    "timestamp": 1752000116837,
+    "requestId": "tt82omr6ra"
+  },
+  "3aa8de74fbed31026009030f9ace7afa5d417469756d7858d2213b08019a956e": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "A textbox where the user can enter the verification code received via email.",
+          "method": "fill",
+          "arguments": [
+            ""
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752000123154,
+    "requestId": "bl2tafqnuj"
+  },
+  "fd63e6474ad47c81443cf617e14c3f862259a26eb00d19848558dcbb992a5c77": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The input field where the user needs to type the verification code.",
+          "method": "fill",
+          "arguments": [
+            ""
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752000130396,
+    "requestId": "an0x4puf67u"
+  },
+  "c0ae00f6f758ffe0e6cec16de5d8875c3ed9a75dcddf23aea010a4bb5dc8a117": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-5",
+          "description": "Email input field for user login",
+          "method": "fill",
+          "arguments": [
+            "arianna.schwartz@madison-reed.com"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752077331004,
+    "requestId": "o31wdo0uj9s"
+  },
+  "554b380a26336e7b444f149461bdfd15b6f61152af54082c6d588698b05d2533": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-2",
+          "description": "The scrollable area of the page, which might contain the sign-in button.",
+          "method": "scrollTo",
+          "arguments": [
+            "50%"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752001870283,
+    "requestId": "olo30chedbg"
+  },
+  "876017d5987069bb79560840c9041c41c1c80ea86a11a1c8fe4a18f1a1a078df": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The textbox where the user can input the verification code received via email.",
+          "method": "fill",
+          "arguments": [
+            ""
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752004008436,
+    "requestId": "b2elxrdoxis"
+  },
+  "6bda75f123461dc5a9633b7e0f6c07f7de739291ff215fc04477bec6574f73f4": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "This is the textbox where the user is expected to input the verification code they received via email."
+        }
+      ]
+    },
+    "timestamp": 1752004015093,
+    "requestId": "jicq831klm"
+  },
+  "88509304a0187adaff379737969fc2c06a4da3e1e41641be10ecc2de353a47bd": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The input field where the user is expected to enter the verification code received via email.",
+          "method": "fill",
+          "arguments": [
+            ""
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752004020207,
+    "requestId": "9j3frngv00p"
+  },
+  "50e68011e045be5f416d9c3dbc497ce2e647c198b91679cfd6ae710132910fa1": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The textbox where the verification code should be entered.",
+          "method": "fill",
+          "arguments": [
+            "2UZXUD"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752010455458,
+    "requestId": "xdcrg9vpud"
+  },
+  "15a0c5cd06c9a1c8843b429d1e464bec28b037b4a203afbbb158471b11c81170": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The 'Verify code' button, which is likely used to submit the verification code entered by the user.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752010462880,
+    "requestId": "i2xm6stotx"
+  },
+  "dfcbb6fcaf2fc1f08117f5d299c88a7bf2c483e5d66b1577ae7671a58fad4419": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The input field for entering the verification code.",
+          "method": "fill",
+          "arguments": [
+            "DTY862"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752010902950,
+    "requestId": "cm8mwbe0h0u"
+  },
+  "677e6786147ee96892a9378cdd8bc3417b0a6a2b4ead0faae022dca37c091632": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' is used to confirm the code entered by the user.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752010910631,
+    "requestId": "0gaz34trfj7"
+  },
+  "075f9aa3d9a82ce63ba1b4bcf1e797901fc7e9338efade8e1af512da8a295dbc": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The input field for entering the verification code.",
+          "method": "fill",
+          "arguments": [
+            "JBG94H"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752011947047,
+    "requestId": "u8myd91jqck"
+  },
+  "1eea063cc96e2788eba06477c73f61e7fb58b79c9ffaafea485578dcad10fd0a": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' used to submit the verification code entered by the user.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752011954255,
+    "requestId": "zab62sksfnp"
+  },
+  "7db7962a347110d27e4725896edbae60af827ff0bd1db73544f9c2a33bea94c8": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The textbox where the user needs to type the verification code.",
+          "method": "fill",
+          "arguments": [
+            "CQTC2W"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752012679337,
+    "requestId": "hsx5qrxy4z7"
+  },
+  "1f9bb59e5fe911fb7565b88503c9b9830d5b020d6fe6c14296d9470e06aa2412": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' used to submit the verification code entered by the user.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752012685886,
+    "requestId": "yj5r4dfsgri"
+  },
+  "78cc24983d3930cee2c8427fdfb460ff26bd0eecfff79b94f29cefccadcae587": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The textbox where the user can type in the code received via email.",
+          "method": "fill",
+          "arguments": [
+            "RY9CFB"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752013144541,
+    "requestId": "4u2hig6qiht"
+  },
+  "947d6e6ca8958c2482ea6ac478e4a906ee6565fd83d489801a79893c19ac85a1": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' is used to submit the entered verification code for validation.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752013152661,
+    "requestId": "4q9lzm82138"
+  },
+  "829593080dee2edac9127e76253faa9fffd05818671c4c9201e4584c610ff8bc": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The textbox where the user is expected to type the 6-character code received via email.",
+          "method": "fill",
+          "arguments": [
+            "IEQ6I8"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752013779939,
+    "requestId": "9q05r13h2pu"
+  },
+  "af267b985cb00ba6be19949e64114fb5c376475a2c962ec5e6e0b5ccc511511a": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' used to submit the verification code entered by the user.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752013785825,
+    "requestId": "2zy1mk223gd"
+  },
+  "e6f51906cdf2f1f5ea2cadcfa627cfca9734828ddd6b7be7281d88661ce5aa49": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The textbox where the user can type the code received via email.",
+          "method": "fill",
+          "arguments": [
+            "YXAV25"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752014084733,
+    "requestId": "yt4v8k09ll"
+  },
+  "68fd4bcc4c99e1411db4f30cf5111c0dedb01b2c40b14a6e9c38f748d966180b": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "Button to verify the code entered by the user",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752014091138,
+    "requestId": "qqzbvzpfzqa"
+  },
+  "c0dbd3179df70745c2e2c2f9c60658c6ba9f0a5255f546e7d4074b60e501602b": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The input field for entering the verification code.",
+          "method": "fill",
+          "arguments": [
+            "8PV2I8"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752016582933,
+    "requestId": "dwz75irgcre"
+  },
+  "fe17d5fa655e8568279b63d35635375bf2192befdc739c70b1092812b259f622": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' used to submit the entered verification code.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752016589508,
+    "requestId": "w6anzmwu9se"
+  },
+  "1cae9f5aab6548a994de9cfdf05930f445d62863a9cd0d1337221f9fa2dc12aa": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-256",
+          "description": "The title of the most recent conversation is 'I have light hair can I add some dark streaks'. This is the first list item under the scrollable list of conversations, indicating it is the most recent."
+        }
+      ]
+    },
+    "timestamp": 1752016605742,
+    "requestId": "uq01hywsy2"
+  },
+  "34b37de2eb694536dfb564b6debfa9ad314f0853579e27c2258ee39bf1f77efd": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-256",
+          "description": "List item containing the text 'I have light hair can I add some dark streaks'",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752016611762,
+    "requestId": "hs54ok6xgi"
+  },
+  "aa371171cff04e4c5d33fe9b5610ea1978d450bc23997ff9d2bfd8029c071273": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-286",
+          "description": "The title of the next most recent conversation is 'Please send now'."
+        }
+      ]
+    },
+    "timestamp": 1752016642734,
+    "requestId": "2z4r8jwu9rs"
+  },
+  "80474893e41e6f03b6daa882ea1be7f4574cf0a328d0bc582b8647847786f598": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "This is the input field where users can enter the verification code they received via email."
+        }
+      ]
+    },
+    "timestamp": 1752077346035,
+    "requestId": "m3winh726i8"
+  },
+  "b87a5f52c4a72e984b38dc38bbdc7e6f7f6417d8fcc1c36cb030b1805646945c": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The textbox where the verification code should be entered.",
+          "method": "fill",
+          "arguments": [
+            "JX5BXN"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752077393839,
+    "requestId": "fsneorgna4"
+  },
+  "f4eb3ad0d469474e2103f58b247a98d0e939c310263a5c5ed31214cf6df74ada": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "A button labeled 'Verify code' used to submit the verification code entered by the user.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752077399809,
+    "requestId": "8bgij9ifaho"
+  },
+  "ae5af9686f59d04b4cb6576f2b52e4674784e40eddab03137c3eea2d50e4030c": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-93",
+          "description": "button labeled 'Target'",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752077455840,
+    "requestId": "q9nfrah0wj8"
+  },
+  "799c4cf6e4d08049e2b862410890ce1927b66d4e2bc19f1dbf5ec11a63693815": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The input field for entering the verification code.",
+          "method": "fill",
+          "arguments": [
+            "61641F"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752077859714,
+    "requestId": "unvdleu7yoa"
+  },
+  "54724dfb01d4eec025ce8de80e98b5042d7cfb6643cecf68f1c4e2956b5f84ae": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' used to submit the verification code entered by the user.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752077865728,
+    "requestId": "r5m1u744vfs"
+  },
+  "a56912153e21db2f30865b528150cf4d1d1f0d05ca1270988c899dc9a9dee4a2": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-260",
+          "description": "The title of the most recent conversation, which is the first list item under the scrollable list of conversations."
+        }
+      ]
+    },
+    "timestamp": 1752077886240,
+    "requestId": "osm7w8n673i"
+  },
+  "15f6cd85159a0d052debbe72797e11af15531f4cd285f0d28fc72df180d30f7d": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "260",
+          "description": "The title of the most recent conversation: 'I updated my payment method but it's still saying it needs attention'",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752077893425,
+    "requestId": "tnw43ouibwi"
+  },
+  "923d76718baeaf5de3f9a8dddd7199fb2ba8a60f074d23ac53b0189873d23bfa": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-290",
+          "description": "Title of the next most recent conversation: 'How much does it cost for root touch membership? I received a text message saying it cost $39'"
+        }
+      ]
+    },
+    "timestamp": 1752077910960,
+    "requestId": "4qjq2cogu5k"
+  },
+  "ec608b0d87840be88cbce15935f58a7a1ddf702f05d43eb0c744af03eef1928b": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "290-293",
+          "description": "Title of the next most recent conversation: 'How much does it cost for root touch membership? I received a text message saying it cost $39'",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752077918591,
+    "requestId": "tghr073nqa"
+  },
+  "c76e5d5a69ea9f03dc636cae96e6755694f6fdbff0873d8a95358f738b832097": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-290",
+          "description": "The list item containing the conversation title 'How much does it cost for root touch membership?'"
+        }
+      ]
+    },
+    "timestamp": 1752077940173,
+    "requestId": "pc5wc42svq"
+  },
+  "bece1fd1564199f95a9b1416a03479dbe844a5dc0622ac9f2b0d256a27849339": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-290",
+          "description": "Title of the conversation regarding 'How much does it cost for root touch membership?'",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752077971651,
+    "requestId": "b6ymdq1olt6"
+  },
+  "16dd9611c15860ae62d886ec4a9949d4b891f78d706062390aca8ca453089355": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-320",
+          "description": "Title of the third most recent conversation: 'I bought product for my hair and it hasn't reached my hands yet, how much longer do I have to wait?'"
+        }
+      ]
+    },
+    "timestamp": 1752078004363,
+    "requestId": "jwp8k85fv5j"
+  },
+  "ea3bd5a955ce7b07630f1198e68dfe1fb61a876d9b975bdf355491a0e7b735c5": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-320",
+          "description": "Title of the third most recent conversation",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752078036968,
+    "requestId": "c6h6fehx4fd"
+  },
+  "d351c884267c7bcda41f4b6031ef214dd069db7f89bc8c1d511b6d029d34332b": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-350",
+          "description": "The title of the conversation about the color issue: 'I used Umbria and my hair is dark, almost black. This is not what I wanted'"
+        }
+      ]
+    },
+    "timestamp": 1752078068365,
+    "requestId": "32hfl7bbztm"
+  },
+  "8a699c809315ed273d1497700b1c6f654ecbfc9ea6eb141bfaee0e4af90e9aeb": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "350-353",
+          "description": "Title of the conversation about the color issue: 'I used Umbria and my hair is dark, almost black. This is not what I wanted'",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752078100729,
+    "requestId": "67ebebrjlkr"
+  },
+  "5b1e08e91748a8e46806442be6c8b2c2e802bf8c367f9b71cdc856c3e0decf93": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "The input field where the user is expected to type the verification code.",
+          "method": "fill",
+          "arguments": [
+            "HZQX1Z"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752087758503,
+    "requestId": "cr9jhsn7hqi"
+  },
+  "5f3a7b24e9c83d749f1d9668a127d228e5dc5c82218889c21c5ecdf510aefdeb": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "The button labeled 'Verify code' is used to submit the entered verification code for validation.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752087764366,
+    "requestId": "94n4dcixtka"
+  },
+  "4b5962a4ea5abd72c04aeb52d8259610047d3f9d1d25901bc32a80c2d2cc454b": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "256",
+          "description": "Title of the most recent conversation",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752087779513,
+    "requestId": "6n2e7xtdq3g"
+  },
+  "1027383b5d107e1568b02dd80000c3b0e41cc33c8fb39ba36834f37643cf8378": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "286-289",
+          "description": "Title of the next most recent conversation",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752087785483,
+    "requestId": "8dtngdko5t"
   }
 }
