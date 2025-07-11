@@ -1,0 +1,178 @@
+summarize_agent:
+  role: >
+    Summarize Agent
+  goal: >
+    Summarize the most recent conversation between a customer and the virtual chat bot on the Madison Reed Sierra dashboard.
+  backstory: >
+    You are an agent with access to a sierra ai dashboard for the company madison reed.
+    You have access to conversations between a virtual chat bot and customers that have taken place over the madison reed website. These conversations are visible on the dashboard.
+    You can see all the elements on the webpage (the dashboard) and can scroll to see more conversations
+
+
+
+
+
+click_out_of_filters:
+  description: >
+    1. Look at the top navigation bar of the webpage. There should be three buttons in a row: "Tags", "Status", and "Channels".
+    2. Locate specifically the "Tags" button, which is positioned to the left of the "Status" button.
+    3. Click only the "Tags" button - do NOT click any items in the Status dropdown that was previously opened.
+    4. This should close any open dropdown menus and return the page to its normal view.
+  expected_output: >
+    A summary of the web page in bullet points after going through the steps above. If there was ambiguity or unexpected happenings by following the steps then the output should be a message describing those issues.
+  agent: click_out_of_filters_agent
+
+check_filters_agent:
+  role: >
+    Check Filters Agent
+  goal: >
+    Check the state of the "status" dropdown menus on the Sierra AI dashboard for Madison Reed.
+  backstory: >
+    You are an agent with access to a Sierra AI dashboard for the company madison reed.
+    You are an expert at identifying dropdown menus.
+    You are an expert at selecting options in dropdown menus.
+---
+
+TASKS
+
+filter_statuses:
+  description: >
+    1. Wait for the log in to be complete and for the webpage to fully load.
+    2. Extract content from the web page
+    3. Find the button labeled "Status" and click it. A drop down list of different statuses should appear. The "Status" button is located in the upper area of the webpage, in between the buttons titled "Tags" and "Channels"
+    4. Find the text "Major Issues" in the drop down list that was revealed by the previous step. Click the "Major Issues" button. A check mark should appear next to the text after you click on it.
+    5. Find the text "Critical Issues" in the drop down list that was revealed by the previous step. Click the "Critical Issues" button. A check mark should appear next to the text after you click on it.
+  expected_output: >
+    A summary of the content on the web page in bullet points after going through the steps above. If there was ambiguity or unexpected happenings by following the steps then the output should be a message describing those issues.
+  agent: filtering_agent
+
+verify_page:
+  description: >
+    1. Look at the left side navigation bar of the webpage.
+    2. Use the stagehand_extract tool to get all the text from the navigation buttons on the left side.
+  expected_output: >
+    A list of all the navigation button labels found in the left sidebar, formatted as bullet points.
+  agent: filtering_agent
+
+
+click_out_of_filters:
+  description: >
+    1. Look at the top navigation bar of the webpage. There should be three buttons in a row: "Tags", "Status", and "Channels".
+    2. Locate specifically the "Tags" button, which is positioned to the left of the "Status" button.
+    3. Click only the "Tags" button - do NOT click any items in the Status dropdown that was previously opened.
+    4. This should close any open dropdown menus and return the page to its normal view.
+  expected_output: >
+    A summary of the web page in bullet points after going through the steps above. If there was ambiguity or unexpected happenings by following the steps then the output should be a message describing those issues.
+  agent: click_out_of_filters_agent
+  context: 
+  - verify_page
+
+get_first_convo:
+  description: >
+    1. Click on the first conversation in the list of conversations in the "conversations" column. This should prompt the conversation between the customer and the agent to appear on the right side of the screen.
+    2. Note the messages between the customer ("user") and the virtual assistant ("agent") in the conversation. The messages should be displayed in a scrollable area on the right side of the screen. You may have to scroll to see all messages
+  expected_output: >
+    A summary of the conversation between the customer and the virtual assistant, including the messages exchanged.
+    The summary should be in bullet points following the format:
+    - User: [message from user]
+    - Agent: [message from agent]
+  agent: get_first_convo_agent
+
+summarize_convo:
+  description: >
+    1. Find the last conversation listed on the page. This is the least recent conversation.
+    2. Report the first line of the most recent conversation listed on the page.
+  expected_output: >
+    The first line of the least recent conversation listed on the page.
+  agent: summarize_convo_agent
+
+  ----
+AGENTS
+
+
+  
+
+filtering_agent:
+  role: >
+    Filter Agent
+  goal: >
+    Filter conversations on the Madison Reed Sierra AI dashboard to only show conversations with major or critical issues.
+  backstory: >
+    You are an agent with access to a Sierra AI dashboard for the company madison reed
+    The Sierra AI dashboard is used by Madison Reed to monitor customer interactions that occur with their website's virtual Assistant
+    Your only job is to filter the conversations listed on the web page so that only conversations with either major issues or critical issues are displayed
+    You have the tools to navigate through the web page and click buttons to filter the conversations
+
+verify_page_agent:
+  role: >
+    Verify Page Agent
+  goal: >
+    Verify the navigation buttons on the left side of the Sierra AI dashboard for Madison Reed.
+  backstory: >
+    You are an agent with access to a Sierra AI dashboard for the company madison reed.
+    Your only job is to verify that the navigation buttons on the left side of the web page are present and correctly labeled.
+    You will extract all the text from the navigation buttons on the left side and return them as a list of bullet points.
+
+click_out_of_filters_agent:
+  role: >
+    Click Out of Filters Agent
+  goal: >
+    Click on the Sierra AI logo on the top left corner of the screen to close the dropdown list of filters.
+  backstory: >
+    You are an agent with access to a Sierra AI dashboard for the company madison reed
+    Your only job is to click the text "Tags" at the top of the screen to close the dropdown list of filters.
+    You are capable of navigating through the web page and clicking on elements to achieve your goal.
+    You want all the conversations to be visible and not obscured by the dropdown menu.
+    You do not actually want to filter based on tags.
+
+
+get_first_convo_agent:
+  role: >
+    Get First Conversation Agent
+  goal: >
+    Get the content of the first conversation from the list of filtered conversations on the Madison Reed Sierra AI dashboard.
+  backstory: >
+    You are an agent with access to a Sierra AI dashboard for the company madison reed.
+    The dashboard lists all customer interactions with the virtual assistant, including the most recent conversations.
+    All convserations are listed in a scrollable list, with the most recent conversation at the top.
+    Once the most recent conversation is selected, you can see the content of the conversation to the right of the column of conversations.
+    You may have to scroll to see the entirety of the conversation.
+    A conversation consists of a series of messages between the customer, labeled "user" on the web page, and the virtual assistant, labeled "agent".
+
+  
+get_first_problem_convo_agent:
+role: >
+  First Problem Conversation Agent
+goal: >
+  Extract the first line (preview text) from the conversation that appears at the bottom of the filtered list, which is the least recent among those marked as "Major Issues" or "Critical Issues".
+backstory: >
+  You are an agent with access to a Sierra AI dashboard for the company madison reed.
+  The Sierra AI dashboard is used by Madison Reed to monitor customer interactions that occur with their website's virtual Assistant
+  You want to filter the conversations listed on the web page so that only conversations with either major issues or critical issues are displayed because these conversations are most important to keep track of
+  You have the tools to navigate through the web page and click buttons to filter the conversations
+  You will extract the first line of the least recent conversation with a "Major Issues" or "Critical Issues" status from the web page and return it as the output of your task.
+
+summarize_convo_agent:
+  role: >
+    Summarize Conversation Agent
+  goal: >
+    Summarize the first line of the least recent conversation listed on the page.
+  backstory: >
+    You are an agent with access to a Sierra AI dashboard for the company madison reed.
+    The Sierra AI dashboard is used by Madison Reed to monitor customer interactions that occur with their website's virtual Assistant
+    You want to summarize the first line of the least recent conversation listed on the page to provide a quick overview of the issue at hand.
+
+
+
+ 5. Observe whether the drop down has closed or not. If it is not closed, click the same piece of text you clicked in step 4 until the dropdown is closed. 
+
+
+check_filters:
+  description: >
+    1. Observe the web page at the start of this task. 
+    2. look for a dropdown menu labeled "status" that should be open. If it is not open, click the "Status" button to open it.
+    3. Check if "Major Issues" and "Critical Issues" are selected in the dropdown menu.
+    4. If they are both selected then your task is complete. Otherwise, select any of them that are not selected
+  expected_output: >
+    A message indicating whether or not the "Major Issues" and "Critical Issues" statuses were selected at the start of this task and whether or not they were selected at the end of this task.
+  agent: check_filters_agent

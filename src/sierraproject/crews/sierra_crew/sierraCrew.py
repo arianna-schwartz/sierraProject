@@ -50,13 +50,70 @@ class SierraCrew:
             verbose=True,
         )
 
+    # @agent 
+    # def get_first_problem_convo_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["get_first_problem_convo_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #     )
+
     @agent
-    def summarize_agent(self) -> Agent:
+    def filter_statuses_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config["summarize_agent"],  # type: ignore[index]
+            config=self.agents_config["filter_statuses_agent"],  # type: ignore[index]
             tools=self.tools,
             verbose=True,
         )
+    
+    # @agent
+    # def check_filters_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["check_filters_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #     )
+
+    @agent
+    def dropdown_check_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config["dropdown_check_agent"],  # type: ignore[index]
+            tools=self.tools,
+            verbose=True,
+        )
+
+    # @agent
+    # def summarize_convo_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["summarize_convo_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #     )
+    
+    # @agent 
+    # def verify_page_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["verify_page_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #     )
+
+
+    # @agent 
+    # def click_out_of_filters_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["click_out_of_filters_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #     )
+    
+    # @agent
+    # def get_first_convo_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["get_first_convo_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #     )
 
     @task
     def login_to_sierra(self) -> Task:
@@ -65,10 +122,52 @@ class SierraCrew:
             # human_input= True,
         )
 
+    # @task
+    # def get_first_problem_convo(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["get_first_problem_convo"],  # type: ignore[index] 
+    #     )
+
+
     @task
-    def summarize(self) -> Task:
+    def filter_statuses(self) -> Task:
         return Task(
-            config=self.tasks_config["summarize"],  # type: ignore[index]
+            config=self.tasks_config["filter_statuses"],  # type: ignore[index]
+        )
+    
+    # @task
+    # def check_filters(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["check_filters"],  # type: ignore[index]
+    #     )
+    # @task
+    # def verify_page(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["verify_page"],  # type: ignore[index]
+    #     )
+
+    # @task
+    # def click_out_of_filters(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["click_out_of_filters"],  # type: ignore[index]
+    #     )
+
+    # @task
+    # def get_first_conversation(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["get_first_convo"],  # type: ignore[index]
+    #     )
+
+    # @task
+    # def summarize_convo(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["summarize_convo"],  # type: ignore[index]
+    #     )
+
+    @task
+    def dropdown_check(self) -> Task:
+        return Task(
+            config=self.tasks_config["dropdown_check"],  # type: ignore[index]
         )
 
     @crew
@@ -80,3 +179,4 @@ class SierraCrew:
             process=Process.sequential,
             verbose=True,
         )
+

@@ -11,21 +11,27 @@ login_to_sierra:
     Log in into the Madison Reed Dashboard and summarize the result of the login attempt.
   agent: login_agent
 
-
-summarize:
+filter_statuses:
   description: >
     1. Wait for the log in to be complete and for the webpage to fully load.
-    2. extract content from the web page
-    3. Each conversation between a customer and the virtual chat bot is listed beneath the title "Conversations." The title of each conversation is in bold text. Do the following steps:
-    
-    3a: Click on the title of the most recent conversation to open it.
-    3b: Read the conversation and remember its content. Scroll if necessary to read the entire conversation.
-    3c: Click on the next most recent conversation to open it 
-    3d: repeat steps 3b and 3c until you have read the last 5 conversations in full.
-    
-    4: Identify the problems that the customer had in each conversation.
-    5: Identify the solutions that the virtual chat bot provided in each conversation.
-    6: Summarize the problems and solutions in a concise manner.
+    2. Find the button labeled "Status" and click it. A drop down list of different statuses should appear, select "Major Issues" and "Critical Issues"
   expected_output: >
-    A summary of the problems and solutions from the last 5 conversations between customers and the virtual chat bot.
-  agent: summarize_agent
+    A message indicating whether or not the "Major Issues" and "Critical Issues" statuses were successfully selected in the dropdown menu.
+  agent: filter_statuses_agent
+
+
+dropdown_check:
+  description: >
+    1. Observe what the web page looks like at the start of this task
+    2. Note whether or not any dropdown menus are open, and if so, which ones
+    4. If any dropdown menus are open, click on a piece of text that is outside the dropdown menu area to close them. Remember what piece of text you clicked on. Do not click along the perimeter of the web page, as clicks in that region may not register.
+    5. Observe whether there are any open drop down menus.
+    5. Report the state of the dropdown menus before and after step 4 and report what piece of text was clicked on in an attempt to close the dropdown menus.
+  expected_output: >
+    A message indicating the state of the dropdown menus on the web page at the start of the task and at the end of the task, and what piece of text was clicked on in an attempt to close the dropdown menus.
+  agent: dropdown_check_agent
+
+
+
+
+
