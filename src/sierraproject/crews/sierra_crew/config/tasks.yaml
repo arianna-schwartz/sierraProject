@@ -14,22 +14,38 @@ login_to_sierra:
 filter_statuses:
   description: >
     1. Wait for the log in to be complete and for the webpage to fully load.
-    2. Find the button labeled "Status" and click it. A drop down list of different statuses should appear, select "Major Issues" and "Critical Issues"
+    2. Find the button labeled "Status" and click it. A drop down list of different statuses should appear. 
+    3. Select "Major Issues" from the drop down 
+    4. Select "Critical Issues" from the drop down
+    5. Press the escape button on the key board, or do the equiavalent action on the page
+    6. Wait for the conversations to filter, this may take a few seconds. You will know the filtering is complete when the only converstaions listed on the page have review status: reviewed
+    7. Once filters are verified as active, describe the conversations listed on the webpage by listing the first line (also the conversation title) of each visible conversation in bullet points
   expected_output: >
-    A message indicating whether or not the "Major Issues" and "Critical Issues" statuses were successfully selected in the dropdown menu.
+    A detailed report in the form of a list of all conversations found in the DOM, including:
+    - Which ones are visible vs hidden
+    - Which ones have major/critical icons
+
+    Follow this format for each conversation:
+     - Conversation Title - [title], status - [status], visibility - [visible/hidden]
+
+    This will help us understand why some conversations might not be visible when they should be.
   agent: filter_statuses_agent
 
-
-dropdown_check:
+get_first_convo:
   description: >
-    1. Observe what the web page looks like at the start of this task
-    2. Note whether or not any dropdown menus are open, and if so, which ones
-    4. If any dropdown menus are open, click on a piece of text that is outside the dropdown menu area to close them. Remember what piece of text you clicked on. Do not click along the perimeter of the web page, as clicks in that region may not register.
-    5. Observe whether there are any open drop down menus.
-    5. Report the state of the dropdown menus before and after step 4 and report what piece of text was clicked on in an attempt to close the dropdown menus.
+    1. The context you have been given is a list of conversation titles. The first converstaion title is the most recent conversation that has occured which has either major or critical status.
+    2. Click on the conversation whose title matches the conversation title in the first element of the list you have been given as context. This is also the first conversation in the list of conversations in the "conversations" column.
+    3. Wait for the conversation between the customer and the agent to appear on the right side of the screen. This may take a moment. Do not proceed to step 3 until the conversation is fully loaded.
+    4. Record all the messages between the customer ("user") and the virtual assistant ("agent") in the conversation.
+       The messages should be displayed in a scrollable area on the right side of the screen. You may have to scroll to see all messages
   expected_output: >
-    A message indicating the state of the dropdown menus on the web page at the start of the task and at the end of the task, and what piece of text was clicked on in an attempt to close the dropdown menus.
-  agent: dropdown_check_agent
+    A summary of the conversation between the customer and the virtual assistant, including the messages exchanged.
+    The summary should be in bullet points following the format:
+    - User: [message from user]
+    - Agent: [message from agent]
+  agent: get_first_convo_agent
+  context: 
+  - filter_statuses
 
 
 
