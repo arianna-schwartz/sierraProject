@@ -20,14 +20,14 @@
       "elements": [
         {
           "elementId": "0-33",
-          "description": "The 'Sign in' button, which is likely used for user authentication or login.",
+          "description": "The 'Sign in' button, which is likely used for user authentication.",
           "method": "click",
           "arguments": []
         }
       ]
     },
-    "timestamp": 1752680373807,
-    "requestId": "91aacraifj"
+    "timestamp": 1752701873554,
+    "requestId": "7lpp9oynck8"
   },
   "231294a86e9f106d28b8ea8b3ca79ef47c60ef74cca9c315e677e6e39fb61876": {
     "data": {
@@ -14216,8 +14216,8 @@
         }
       ]
     },
-    "timestamp": 1752621419311,
-    "requestId": "hpniz3f1s4"
+    "timestamp": 1752701939866,
+    "requestId": "zi0j4rrd96"
   },
   "c73485faa03ebcebd89d8bd236b5a585e3daf5b193343e0e34a5ef23c16c0fb7": {
     "data": {
@@ -14230,8 +14230,8 @@
         }
       ]
     },
-    "timestamp": 1752621426956,
-    "requestId": "t2w4rvuka8b"
+    "timestamp": 1752701955386,
+    "requestId": "j1x05elumvr"
   },
   "1aec1602e928b88d5ffd888c1bc3d46860c89a55288aca882d0768c0caa73adc": {
     "data": {
@@ -14664,5 +14664,363 @@
     },
     "timestamp": 1752680546642,
     "requestId": "mj9ew0e58xn"
+  },
+  "f9f776331119593196ed736422922c6b64f06b1ef758a9e427e03dcb5b351cc9": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-5",
+          "description": "Email input textbox for entering the user's email address",
+          "method": "fill",
+          "arguments": [
+            "arianna.schwartz@madison-reed.com"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752701867824,
+    "requestId": "at3x8uf6xec"
+  },
+  "b2172edd48af4e899d5e9568aa11c7c1e49197bf2d30d6a84d79a837dadfd644": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-45",
+          "description": "Textbox for entering the verification code",
+          "method": "fill",
+          "arguments": [
+            "YUJAEN"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752701903628,
+    "requestId": "27fz6swlzlm"
+  },
+  "e90ab92e99984e395c7530a247835478003d89871ea2d37c976224773d273ddb": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-79",
+          "description": "A button labeled 'Verify code' used to confirm the entered verification code.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752701909118,
+    "requestId": "8kvjsqh6gaa"
+  },
+  "3c397a4ca5e234806d6a901d62734ed0472a23c8305a16da4ea2b80b390b7b94": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-213",
+          "description": "Heading: Conversations - This heading indicates the section of the dashboard related to conversations."
+        },
+        {
+          "elementId": "0-217",
+          "description": "Button: Conversation list actions - This button likely provides actions related to the list of conversations."
+        },
+        {
+          "elementId": "0-226",
+          "description": "Button: Search conversations - This button allows users to search through conversations."
+        },
+        {
+          "elementId": "0-232",
+          "description": "Button: Filter to time range - This button allows users to filter conversations by a specific time range."
+        },
+        {
+          "elementId": "0-239",
+          "description": "Button: Tags - This button allows users to manage or view tags associated with conversations."
+        },
+        {
+          "elementId": "0-243",
+          "description": "Button: Status - This button allows users to filter or view conversations by their status."
+        },
+        {
+          "elementId": "0-247",
+          "description": "Button: Channels - This button allows users to filter or view conversations by their communication channels."
+        }
+      ]
+    },
+    "timestamp": 1752701925576,
+    "requestId": "u4tbfonnau"
+  },
+  "2b83e125754d6845172f97a2a91f631f658d354d32dd1cd0dd2a98d7967b3701": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-243",
+          "description": "Button labeled 'Status' for managing conversation statuses.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752701931360,
+    "requestId": "ycmys6jr5jq"
+  },
+  "3bb718b49376c635388ef2cb8b9c91376488d441c7158273167acd3cb4c7f56a": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1834",
+          "description": "The 'Major issues' menu item checkbox, which should have a checkmark if it is selected or visible."
+        }
+      ]
+    },
+    "timestamp": 1752701947882,
+    "requestId": "tfpgpkx9l4"
+  },
+  "10907cdf65fe5b25961fb0400ea769c1b9c6393e17f6c586ecb255620b0c3716": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1844",
+          "description": "The 'Critical issues' checkbox, which is part of the menu indicating different issue statuses. This element is likely to have a checkmark next to it if it is selected or marked as visible."
+        }
+      ]
+    },
+    "timestamp": 1752701964255,
+    "requestId": "rwnb3w02rkp"
+  },
+  "2bf8b9bca1b29383ad169fc72a902228a6380e1077ca45adfc89a58a6a3b08c2": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-97",
+          "description": "Scrollable area containing the conversations list."
+        }
+      ]
+    },
+    "timestamp": 1752701968754,
+    "requestId": "tkg2arvcgc"
+  },
+  "74fd53422b05024d77d64cc810f4e354885865dd65a15a2b41296c562804209f": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1834",
+          "description": "menuitemcheckbox representing 'Major issues' in the status menu."
+        },
+        {
+          "elementId": "0-1844",
+          "description": "menuitemcheckbox representing 'Critical issues' in the status menu."
+        }
+      ]
+    },
+    "timestamp": 1752701973325,
+    "requestId": "johpwomz5c8"
+  },
+  "7f3fb810885ddf25b31dce538266d0f9cafd8c2238a3d4a2c1188b3fc49002b3": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1834",
+          "description": "Menu item checkbox for Major issues",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752701982521,
+    "requestId": "5du00x7qkta"
+  },
+  "0ad20e2b594dd884345d80b8805cdd875cf95beee9dd12c3fe8a9fe70288d871": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-2",
+          "description": "The email input field where the user can type their email address.",
+          "method": "fill",
+          "arguments": [
+            "arianna.schwartz@madison-reed.com"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752702505054,
+    "requestId": "jf2od9k1m"
+  },
+  "06dfb069915ba007eee8bb3aabc4f9527a54797567f24752fcc827519e099521": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-36",
+          "description": "Sign in button within the form section",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752702509795,
+    "requestId": "zb3ncwr4yi"
+  },
+  "30dc4f497160f4b17a6a41f414b31c14d4dec7eea5591615f5749b959660d8d9": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-48",
+          "description": "The input field for entering the verification code.",
+          "method": "fill",
+          "arguments": [
+            "I4ABYU"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752702536510,
+    "requestId": "erdxnncfx4p"
+  },
+  "6409630fe641e2d317c14e0c0cdf5106f90fbf77da3ecc3680d5ad45c9fa88cf": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-82",
+          "description": "The button labeled 'Verify code' used to submit the verification code entered by the user.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752702541578,
+    "requestId": "11m8u89bwqc9"
+  },
+  "6afb4137e52f731930e1bbd7843f5e4d1f66ed8c54830678086ae73e545e027b": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-220",
+          "description": "The heading 'Conversations' under the div structure, indicating the dashboard is visible."
+        }
+      ]
+    },
+    "timestamp": 1752702555223,
+    "requestId": "mgsjxtalpy"
+  },
+  "6be68775ae9215acae85f8fd2946ee70f6d50e2c07a622aeac91a32c7e6d70e1": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-250",
+          "description": "The button labeled 'Status' used for filtering conversations by status.",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752702562365,
+    "requestId": "dtxytizxvld"
+  },
+  "dc1d63512602349836c64b5ee05b3413216b3c14cfaa4096ffa4841637cc096a": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1841",
+          "description": "menuitemcheckbox labeled 'Major issues' within the 'Status' menu",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752702569952,
+    "requestId": "4o6gtibwfzx"
+  },
+  "d08f64ae6e193aaa7c88ba30bde2f0cf372a8e2b5fa82a0835161c59e3df1f63": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1841",
+          "description": "The 'Major issues' menu item checkbox, which is the target element to observe for a checkmark."
+        }
+      ]
+    },
+    "timestamp": 1752702579129,
+    "requestId": "ovd3fljolo"
+  },
+  "082649ca99ca6dba82567e58874635afad96ef12a7c21f300334a585fcb67536": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1851",
+          "description": "menu item checkbox labeled 'Critical issues' within the dropdown menu",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752702584498,
+    "requestId": "63v1oxcni4w"
+  },
+  "b56900d4ceff7d1bf4eea88c6fb222b1500d15fe60c4d4bf670f4c3738b0392b": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1851",
+          "description": "The 'Critical Issues' menu item checkbox, which is the target element to observe for a checkmark."
+        }
+      ]
+    },
+    "timestamp": 1752702591893,
+    "requestId": "5owduueprx7"
+  },
+  "602969bd237ee02dc43dd9cb5abc9035a99c502b4da10aa16aa4c274a2e7a4fc": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-1819",
+          "description": "The dropdown menu containing status options such as Major issues and Critical issues.",
+          "method": "press",
+          "arguments": [
+            "Escape"
+          ]
+        }
+      ]
+    },
+    "timestamp": 1752702596535,
+    "requestId": "19nd079gedz"
+  },
+  "4f2f009b152d3d218ca9e1cc7c81a95632773b712683e6ebc4799d18cb762590": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "3857-3860",
+          "description": "The most recent conversation titled 'My mail order made on ••••••• was not received. I am looking for a refund.'",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752702609423,
+    "requestId": "npxrua64s9p"
+  },
+  "cb82c04cfb2cec38dee30653e1e9b9eb52c1d795b92d9b63b9da49a8158b2c64": {
+    "data": {
+      "elements": [
+        {
+          "elementId": "0-233",
+          "description": "Button to search conversations",
+          "method": "click",
+          "arguments": []
+        }
+      ]
+    },
+    "timestamp": 1752702632097,
+    "requestId": "el6j615mpw"
+  },
+  "1b7315bfe06ac60634b53c843529aa4784b6adafaf3486823870a09cb6389b6b": {
+    "data": {
+      "elements": []
+    },
+    "timestamp": 1752702667737,
+    "requestId": "h662woieqw6"
+  },
+  "d687b59fb4b396c358294316690ac4ac8f7a9120243949f7a7cbb86852a04c78": {
+    "data": {
+      "elements": []
+    },
+    "timestamp": 1752702703087,
+    "requestId": "acve25mdqyg"
   }
 }

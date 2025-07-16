@@ -1,52 +1,53 @@
-login_to_sierra:
+analyze_sierra_conversations:
   description: >
-    Log in into the Madison Reed Dashboard by performing these steps one by one:
-    Step 1: Navigate to the url: https://madison-reed.sierra.ai
-    Step 2: Enter the email: {email} in the email field
-    Step 3: Click the sign in button
-    Step 4: Use the get_verification_code tool to get the verification code from the user via the CLI. The code was sent to their email.
-    Step 5: Enter the verification code obtained in Step 4 in the "code" field on the web page
-    Step 6: Click the "verify code" button
+    Complete a full analysis of critical and major issue conversations by following these phases carefully:
+
+    LOGIN PHASE:
+    1. Navigate to https://madison-reed.sierra.ai
+    2. Enter email: arianna.schwartz@madison-reed.com
+    3. Click the sign in button
+    4. Use get_verification_code tool to obtain verification code via CLI
+    5. Enter the verification code in the "code" field
+    6. Click "verify code" button
+    7. Verify successful login by confirming dashboard access
+
+    FILTERING PHASE:
+    8. Wait for dashboard to fully load
+    9. Locate and click the "Status" button
+    10. In the dropdown:
+        - Select "Major Issues" and verify checkmark appears
+        - Select "Critical Issues" and verify checkmark appears
+    11. Close the dropdown menu by pressing the escape key or doing the equivalent 
+    12. Verify filter application:
+        - Wait for the conversations list to update to show only converesations with "critical" or "major" statuses
+        - Confirm visible conversations show major/critical icons
+
+
+    CONVERSATION ANALYSIS PHASE:
+    12. Once filters are confirmed active:
+        - Locate the most recent conversation
+        - Note the title of the conversation. This title is the first message from the user to the chatbot. The message may be long and that is okay, the title of the conversation can be long.
+        - Click to view full conversation details
+        - Extract complete dialogue between user and agent
+        - Analyze the conversation content
+
+    IMPORTANT GUIDELINES:
+    - Complete each phase fully before moving to the next
+    - Verify success at each step before proceeding
+    - Use available tools for all actions - no guessing
+    - Wait for page updates to complete
+    - If a step fails, retry with variations before reporting failure
+    - Maintain clear progress updates
+    - Do not yield control until ALL phases are complete
+
   expected_output: >
-    Log in into the Madison Reed Dashboard and summarize the result of the login attempt.
-  agent: login_agent
+    A complete analysis including:
+    1. Confirmation of successful login
+    2. Verification of active filters (major/critical issues)
+    3. Full dialogue from the most recent critical/major issue conversation
+    4. Any relevant metadata (timestamp, status, etc.)
 
-filter_statuses:
-  description: >
-    1. Wait for the log in to be complete and for the webpage to fully load.
-    2. Find the button labeled "Status" and click it. A drop down list of different statuses should appear. 
-    3. Select "Major Issues" from the drop down 
-    4. Select "Critical Issues" from the drop down
-    5. Press the escape button on the key board, or do the equiavalent action on the page
-    6. Wait for the conversations to filter, this may take a few seconds. You will know the filtering is complete when the only converstaions listed on the page have review status: reviewed
-    7. Once filters are verified as active, describe the conversations listed on the webpage by listing the first line (also the conversation title) of each visible conversation in bullet points
-  expected_output: >
-    A detailed report in the form of a list of all conversations found in the DOM, including:
-    - Which ones are visible vs hidden
-    - Which ones have major/critical icons
-
-    Follow this format for each conversation:
-     - Conversation Title - [title], status - [status], visibility - [visible/hidden]
-
-    This will help us understand why some conversations might not be visible when they should be.
-  agent: filter_statuses_agent
-
-get_first_convo:
-  description: >
-    1. The context you have been given is a list of conversation titles. The first converstaion title is the most recent conversation that has occured which has either major or critical status.
-    2. Click on the conversation whose title matches the conversation title in the first element of the list you have been given as context. This is also the first conversation in the list of conversations in the "conversations" column.
-    3. Wait for the conversation between the customer and the agent to appear on the right side of the screen. This may take a moment. Do not proceed to step 3 until the conversation is fully loaded.
-    4. Record all the messages between the customer ("user") and the virtual assistant ("agent") in the conversation.
-       The messages should be displayed in a scrollable area on the right side of the screen. You may have to scroll to see all messages
-  expected_output: >
-    A summary of the conversation between the customer and the virtual assistant, including the messages exchanged.
-    The summary should be in bullet points following the format:
-    - User: [message from user]
-    - Agent: [message from agent]
-  agent: get_first_convo_agent
-  context: 
-  - filter_statuses
-
+  agent: sierra_agent
 
 
 

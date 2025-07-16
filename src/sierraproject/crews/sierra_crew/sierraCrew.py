@@ -38,43 +38,55 @@ class SierraCrew:
         
         print(f">>> Available tools from Stagehand MCP server: {[tool.name for tool in self.tools]}")
 
-    @agent
-    def login_agent(self) -> Agent:
-        return Agent(
-            config=self.agents_config["login_agent"],  # type: ignore[index]
-            tools=self.tools,
-            verbose=True,
-        )
+    # @agent
+    # def login_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["login_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #     )
+
+    # @agent
+    # def filter_statuses_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["filter_statuses_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #         temperature=0.1,  # Adding low temperature for more precise, deterministic behavior
+    #         reasoning=True,  # Enable reasoning for better decision-making
+    #         planning=True  # Enable planning for better task execution
+    #     )
+    
+
+    # @agent
+    # def get_first_convo_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config["get_first_convo_agent"],  # type: ignore[index]
+    #         tools=self.tools,
+    #         verbose=True,
+    #         temperature=0.5,  # Adding low temperature for more precise, deterministic behavior
+    #         reasoning=True,  # Enable reasoning for better decision-making
+    #         planning=True
+        # )
 
     @agent
-    def filter_statuses_agent(self) -> Agent:
+    def sierra_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config["filter_statuses_agent"],  # type: ignore[index]
+            config=self.agents_config["sierra_agent"],  # type: ignore[index]
             tools=self.tools,
             verbose=True,
             temperature=0.1,  # Adding low temperature for more precise, deterministic behavior
             reasoning=True,  # Enable reasoning for better decision-making
-            planning=True  # Enable planning for better task execution
+            planning=True
         )
     
 
-    @agent
-    def get_first_convo_agent(self) -> Agent:
-        return Agent(
-            config=self.agents_config["get_first_convo_agent"],  # type: ignore[index]
-            tools=self.tools,
-            verbose=True,
-            temperature=0.5,  # Adding low temperature for more precise, deterministic behavior
-            reasoning=True,  # Enable reasoning for better decision-making
-            planning=True
-        )
-
-    @task
-    def login_to_sierra(self) -> Task:
-        return Task(
-            config=self.tasks_config["login_to_sierra"],  # type: ignore[index]
-            # human_input= True,
-        )
+    # @task
+    # def login_to_sierra(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["login_to_sierra"],  # type: ignore[index]
+    #         # human_input= True,
+    #     )
 
     # @task
     # def get_first_problem_convo(self) -> Task:
@@ -83,17 +95,25 @@ class SierraCrew:
     #     )
 
 
-    @task
-    def filter_statuses(self) -> Task:
-        return Task(
-            config=self.tasks_config["filter_statuses"],  # type: ignore[index]
-        )
+    # @task
+    # def filter_statuses(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["filter_statuses"],  # type: ignore[index]
+    #     )
+    
+    # @task
+    # def get_first_convo(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config["get_first_convo"],  # type: ignore[index]
+    #     )
     
     @task
-    def get_first_convo(self) -> Task:
+    def analyze_sierra_conversations(self) -> Task:
         return Task(
-            config=self.tasks_config["get_first_convo"],  # type: ignore[index]
+            config=self.tasks_config["analyze_sierra_conversations"],  # type: ignore[index]
+            # human_input= True,
         )
+
 
     @crew
     def crew(self) -> Crew:

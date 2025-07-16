@@ -10,8 +10,6 @@ summarize_agent:
 
 
 
-
-
 click_out_of_filters:
   description: >
     1. Look at the top navigation bar of the webpage. There should be three buttons in a row: "Tags", "Status", and "Channels".
@@ -96,6 +94,57 @@ dropdown_check:
   expected_output: >
     A message indicating the state of the dropdown menus on the web page at the start of the task and at the end of the task, and what piece of text was clicked on in an attempt to close the dropdown menus.
   agent: dropdown_check_agent
+
+  MOST RECENT TASKS:
+  login_to_sierra:
+  description: >
+    Log in into the Madison Reed Dashboard by performing these steps one by one:
+    Step 1: Navigate to the url: https://madison-reed.sierra.ai
+    Step 2: Enter the email: {email} in the email field
+    Step 3: Click the sign in button
+    Step 4: Use the get_verification_code tool to get the verification code from the user via the CLI. The code was sent to their email.
+    Step 5: Enter the verification code obtained in Step 4 in the "code" field on the web page
+    Step 6: Click the "verify code" button
+  expected_output: >
+    Log in into the Madison Reed Dashboard and summarize the result of the login attempt.
+  agent: login_agent
+
+filter_statuses:
+  description: >
+    1. Wait for the log in to be complete and for the webpage to fully load.
+    2. Find the button labeled "Status" and click it. A drop down list of different statuses should appear. 
+    3. Select "Major Issues" from the drop down 
+    4. Select "Critical Issues" from the drop down
+    5. Press the escape button on the key board, or do the equiavalent action on the page
+    6. Wait for the conversations to filter, this may take a few seconds. You will know the filtering is complete when the only converstaions listed on the page have review status: reviewed
+    7. Once filters are verified as active, describe the conversations listed on the webpage by listing the first line (also the conversation title) of each visible conversation in bullet points
+  expected_output: >
+    A detailed report in the form of a list of all conversations found in the DOM, including:
+    - Which ones are visible vs hidden
+    - Which ones have major/critical icons
+
+    Follow this format for each conversation:
+     - Conversation Title - [title], status - [status], visibility - [visible/hidden]
+
+    This will help us understand why some conversations might not be visible when they should be.
+  agent: filter_statuses_agent
+
+get_first_convo:
+  description: >
+    1. The context you have been given is a list of conversation titles. The first converstaion title is the most recent conversation that has occured which has either major or critical status.
+    2. Click on the conversation whose title matches the conversation title in the first element of the list you have been given as context. This is also the first conversation in the list of conversations in the "conversations" column.
+    3. Wait for the conversation between the customer and the agent to appear on the right side of the screen. This may take a moment. Do not proceed to step 3 until the conversation is fully loaded.
+    4. Record all the messages between the customer ("user") and the virtual assistant ("agent") in the conversation.
+       The messages should be displayed in a scrollable area on the right side of the screen. You may have to scroll to see all messages
+  expected_output: >
+    A summary of the conversation between the customer and the virtual assistant, including the messages exchanged.
+    The summary should be in bullet points following the format:
+    - User: [message from user]
+    - Agent: [message from agent]
+  agent: get_first_convo_agent
+  context: 
+  - filter_statuses
+
 
   ----
 AGENTS
@@ -200,4 +249,30 @@ check_filters:
     You do not want to click on the perimeter of the web page, as clicks in that region may not register.
     You do not want to click on any text that is part of a dropdown menu, as this will interfere with the pre-selected options. It is not your job to change the selected options in the dropdown menus.
     If you find a dropdown menu that is open, you do not want to change any of the selected options for that dropdown menu.
-    
+  
+
+  --MOST RECENT AGENTS
+login_agent:
+  role: >
+    Login Assistant
+  goal: >
+    Login to the Madison Reed Sierra ai dashboard using the email arianna.schwartz@madison-reed.com and a verification code supplied by the user
+  backstory: >
+    You are in charge of securely logging into the sierra dashboard that is used by Madison Reed.
+    Madison Reed uses the Sierra dashboard to monitor customer interactions that occur with their website's virtual Assistant
+    You have the knowledge to take the first authentication step and input the email arianna.schwartz@madison-reed.com into the login page
+    You have the knowledge to take the second authentication step and input the verification code that is sent to the email
+    Once the email has been submitted on the sierra login page and you have obtained the verification code and submitted it, your job is done
+
+filter_statuses_agent:
+  role: >
+    Filter Statuses Agent
+  goal: >
+    Filter conversations on the Madison Reed Sierra AI dashboard to only show conversations with major or critical issues.
+  backstory: >
+    You are an agent with access to a Sierra AI dashboard for the company madison reed.
+    The Sierra AI dashboard is used by Madison Reed to monitor customer interactions that occur with their website's virtual Assistant
+    You want to filter the conversations listed on the web page so that only conversations with either major issues or critical issues are displayed because these conversations are most important to keep track of
+    You have the tools to navigate through the web page and click buttons to filter the conversations
+    You have patience and are willing to wait for the web page to update after applying the filters.
+
