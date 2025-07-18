@@ -76,7 +76,7 @@ class SierraCrew:
             tools=self.tools,
             verbose=True,
             temperature=0.1,  # Adding low temperature for more precise, deterministic behavior
-            reasoning=True,  # Enable reasoning for better decision-making
+            reasoning=False,  # Temporarily disable reasoning to avoid the error
             planning=True
         )
     

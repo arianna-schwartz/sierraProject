@@ -1,8 +1,10 @@
 analyze_sierra_conversations:
   description: >
-    Complete a full analysis of critical and major issue conversations by following these phases carefully:
+    Use the SierraAI chat analyzer by following these phases carefully:
 
     LOGIN PHASE:
+    Note: If you encounter difficulties during this phase do not completely restart the login phase. Retry the current step but DO NOT COMPLETELY RESTART THE PHASE.
+
     1. Navigate to https://madison-reed.sierra.ai
     2. Enter email: arianna.schwartz@madison-reed.com
     3. Click the sign in button
@@ -11,25 +13,25 @@ analyze_sierra_conversations:
     6. Click "verify code" button
     7. Verify successful login by confirming dashboard access
 
-    FILTERING PHASE:
-    8. Wait for dashboard to fully load
-    9. Locate and click the "Status" button
-    10. In the dropdown:
-        - Select "Major Issues" and verify checkmark appears
-        - Select "Critical Issues" and verify checkmark appears
-    11. Close the dropdown menu by pressing the escape key or doing the equivalent 
-    12. Verify filter application:
-        - Wait for the conversations list to update to show only converesations with "critical" or "major" statuses
-        - Confirm visible conversations show major/critical icons
+    NAVIGATE TO CHAT ANALYZER PHASE:
+    8. Locate and click the "Utilities" button in the left sidebar. 
+    9. A button labeled "Chat Analyzer" should appear in the dropdown. Locate this button and click it.
 
+    ENTER PROMPT PHASE:
+    11. Locate the area on the web page where you can enter a prompt for the chat Analyzer
+    12. Enter the prompt "Classify the conversation based on the user's intent."
+    13. Click the "Run" button
+    14. Wait at least 30 seconds. You cannot proceed until all loading icons complete. It is normal for this step to take a while. Do not try changing your approach to this step if the loading icon does not immediately go away. JUST WAIT.
 
-    CONVERSATION ANALYSIS PHASE:
-    12. Once filters are confirmed active:
-        - Locate the most recent conversation
-        - Note the title of the conversation. This title is the first message from the user to the chatbot. The message may be long and that is okay, the title of the conversation can be long.
-        - Click to view full conversation details
-        - Extract complete dialogue between user and agent
-        - Analyze the conversation content
+    OBTAIN INFORMATION PHASE:
+    13. Locate the table of information that was generated on the page. Column names include "Drill Down" and "Category"
+    14. Scroll down on the web page until the table is completely visible
+
+    INFO GATHERING PHASE:
+    15. Gather the information that is present in the "Category," "Count", and "Summary" columns
+    16. Format the information you gathered in following this structure for each row of the table:
+        - Category: XXX, Count: XXX, Summary: XXX
+        where each XXX is actually the value of that each row has for that title
 
     IMPORTANT GUIDELINES:
     - Complete each phase fully before moving to the next
@@ -41,11 +43,9 @@ analyze_sierra_conversations:
     - Do not yield control until ALL phases are complete
 
   expected_output: >
-    A complete analysis including:
-    1. Confirmation of successful login
-    2. Verification of active filters (major/critical issues)
-    3. Full dialogue from the most recent critical/major issue conversation
-    4. Any relevant metadata (timestamp, status, etc.)
+    A report in bullet point format of the success or failures of each phase. Identify what you were able to complete sucessfully and what (if anything) you failed to do.
+    Then include a line full of {=}
+    Then include the formatted information you gathered in the INFO GATHERING PHASE
 
   agent: sierra_agent
 
